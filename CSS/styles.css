@@ -1,0 +1,101 @@
+/* Apply border-box to all elements */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+section {
+    padding: 20px;
+    margin: 20px 0;  /* Vertical spacing between sections */
+}
+
+/* Section styles */
+.intro, .portfolio, .skills, .contact {
+    background-color: white;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 20px; /* Add spacing between sections */
+}
+
+h2 {
+    margin-top: 0;
+    padding-bottom: 10px; /* Optional: add bottom padding for spacing */
+}
+
+/* Portfolio layout (3-column by default) */
+.portfolio .project {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    width: calc(33% - 20px);
+    box-sizing: border-box;
+    text-align: center;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .portfolio .project {
+        width: calc(50% - 20px); /* 2 columns on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .portfolio .project {
+        width: 100%; /* 1 column on very small screens */
+    }
+}
+
+/* Skills section styling */
+.skills ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.skills li {
+    background-color: #f9f9f9;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+}
+
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;  /* Changed to relative positioning */
+    width: 100%;
+}
+
+/* Link styling */
+a {
+    color: #333;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #007bff; /* Optional: change color on hover */
+}
